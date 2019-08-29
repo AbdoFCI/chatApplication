@@ -25,3 +25,12 @@ as new client regiteration is not implemented yet.
 2. **username**:bebo  **password**:1234 .
  
 ---
+
+### Design Notes ###
+the App consists of 4 classes as follows:
+1. **Server**: responsible for creating a server socket then creating a **ClientHandler** thread for each client connection .
+2. **Client**: responsible for creating client instance and connection it to server socket .
+3. **ClientHandler**: it extends Thread class as thier exists a ClientHandler thread for each Client instance and resposible for serveing the client depending on **ClientService** instance .
+4. **ClientService**: provide a punch of methods(services) to be consumed in **ClientHandler** .
+ 
+---
